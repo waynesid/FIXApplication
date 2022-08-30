@@ -1,0 +1,21 @@
+20220427-01:08:39: Session FIX.4.4:ACCEPTOR->ATHENA schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20220427-01:08:39: Created session: FIX.4.4:ACCEPTOR->ATHENA
+20220427-01:08:45: Accepting session FIX.4.4:ACCEPTOR->ATHENA from /127.0.0.1:54178
+20220427-01:08:45: Acceptor heartbeat set to 30 seconds
+20220427-01:08:45: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20220427-01:08:45: Received logon
+20220427-01:08:45: Responding to Logon request
+20220427-01:08:45: Application exception in toAdmin()
+java.lang.NullPointerException: Cannot invoke "quickfix.SessionSettings.getString(quickfix.SessionID, String)" because "this.sessionSettings" is null
+	at com.QuickFIxJApplication.FIXApplication.Application.FixApplicationImpl.toAdmin(FixApplicationImpl.java:85)
+	at quickfix.Session.sendRaw(Session.java:2602)
+	at quickfix.Session.generateLogon(Session.java:2555)
+	at quickfix.Session.nextLogon(Session.java:2202)
+	at quickfix.Session.next(Session.java:1050)
+	at quickfix.Session.next(Session.java:1228)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:163)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:113)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.lambda$blockInThread$1(SingleThreadedEventHandlingStrategy.java:145)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$ThreadAdapter$RunnableWrapper.run(SingleThreadedEventHandlingStrategy.java:267)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+

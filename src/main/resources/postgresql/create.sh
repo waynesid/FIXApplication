@@ -1,0 +1,1 @@
+psql -U wayne -d fixtrading -f postgresql.sql
